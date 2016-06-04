@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khanh's closet</title>
+</head>
+<body>
+{% for outfit in outfits %}
+
+    <h1>{{ outfit.title }}</h1>
+    <img src="{{ outfit.img }}"/>
+    <h8>{{ outfit.des }}</h8>
+{% endfor %}
+</body>
+</html>
