@@ -9,8 +9,7 @@ from flask import Flask,render_template
 # password = "hallo296"
 # mongoengine.connect(db_name, host=host, port=port, username=user_name, password=password)
 
-app = Flask(__name__)
-
+app = Flask(__name__, static_url_path='')
 class Outfit:
     def __init__(self,title,img,des):
         self.title = title
@@ -30,7 +29,7 @@ outfits = [outfit1,outfit2,outfit3]
 
 @app.route('/')
 def closet():
-    return render_template('closet.html',outfits = outfits)
+    return render_template('index.html', outfits= outfits)
 
 
 if __name__ == '__main__':
